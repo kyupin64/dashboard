@@ -255,6 +255,22 @@ body {
             width: 6.5%;
             text-align: center;
         }
+        .bars {
+            @include flexbox(row nowrap, space-around, flex-end);
+            position: absolute;
+            bottom: -.1em;
+            left: 2.4em;
+            width: 92%;
+            height: 100%;
+        
+            .data {
+                @include card(2%, 1%, 5%, var(--tooltip-height));
+                background-color: base.$dark-blue;
+            }
+            .data:nth-child(even) {
+                background-color: base.$dark-purple
+            }
+        }
     }
 }
 

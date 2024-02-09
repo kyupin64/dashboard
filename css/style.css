@@ -306,6 +306,27 @@ body {
   width: 6.5%;
   text-align: center;
 }
+.inner-card .chart .bars {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 0;
+  position: absolute;
+  bottom: -0.1em;
+  left: 2.4em;
+  width: 92%;
+  height: 100%;
+}
+.inner-card .chart .bars .data {
+  border-radius: 2%/1%;
+  width: 5%;
+  height: var(--tooltip-height);
+  background-color: rgb(25, 25, 101);
+}
+.inner-card .chart .bars .data:nth-child(even) {
+  background-color: rgb(91, 34, 90);
+}
 
 h1 {
   font-size: 2.4em;
