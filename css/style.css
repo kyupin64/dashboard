@@ -109,7 +109,7 @@ body {
   width: auto;
   height: 280px;
   min-width: 250px;
-  flex: 1 0 30%;
+  flex: 1 0 25%;
 }
 #main-content .outer-card:nth-child(odd) .inner-card {
   background-color: #999;
@@ -127,7 +127,7 @@ body {
   width: auto;
   height: 280px;
   min-width: 350px;
-  flex: 1 0 50%;
+  flex: 1 0 55%;
 }
 #main-content .outer-card:nth-child(even) .inner-card {
   background-color: #999;
@@ -200,18 +200,48 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 0;
-  padding: 5px 10px;
-  font-size: 0.9em;
+  padding: 5px 15px;
+  font-size: 0.7em;
 }
 .inner-card .schedule {
   padding: 0 25px;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   height: 80%;
 }
 .inner-card .schedule .hour {
   border-left: 1px dashed #222;
   border-right: 1px dashed #222;
+}
+.inner-card .schedule .task {
+  background-color: rgb(81, 17, 17);
+  color: #eee;
+  padding: 4px 6px;
+  border-radius: 5%/8%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+}
+.inner-card .schedule .task .info {
+  font-size: 0.7em;
+}
+.inner-card .schedule .task:nth-last-child(3) {
+  top: 15%;
+  left: 9%;
+  width: 36%;
+  box-shadow: 20px 0 rgba(81, 17, 17, 0.5);
+}
+.inner-card .schedule .task:nth-last-child(2) {
+  top: 40%;
+  left: 46%;
+  background-color: rgb(25, 25, 101);
+  box-shadow: 40px 0 rgba(25, 25, 101, 0.5);
+}
+.inner-card .schedule .task:last-child {
+  top: 65%;
+  left: 62%;
+  box-shadow: 24px 0 rgba(81, 17, 17, 0.5);
 }
 
 h1 {

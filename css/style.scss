@@ -97,7 +97,7 @@ body {
         @include colors-spacing(base.$medium-grey);
         @include card(7%, 10%, $height: 280px);
         min-width: 250px;
-        flex: 1 0 30%;
+        flex: 1 0 25%;
 
         .inner-card {
             @include colors-spacing(base.$light-grey);
@@ -108,7 +108,7 @@ body {
         @include colors-spacing(base.$medium-grey);
         @include card(4%, 10%, $height: 280px);
         min-width: 350px;
-        flex: 1 0 50%;
+        flex: 1 0 55%;
 
         .inner-card {
             @include colors-spacing(base.$light-grey);
@@ -159,18 +159,46 @@ body {
 
     .times {
         @include flexbox(row nowrap, space-between);
-        padding: 5px 10px;
-        font-size: base.$small-font;
+        padding: 5px 15px;
+        font-size: base.$tiny-font;
     }
     .schedule {
         padding: 0 25px;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         height: 80%;
     
         .hour {
             border-left: 1px dashed base.$very-dark-grey;
             border-right: 1px dashed base.$very-dark-grey;
+        }
+
+        .task {
+            @include colors-spacing(base.$dark-red, base.$very-light-grey, 4px, 6px);
+            @include card(5%, 8%);
+            position: absolute;
+            z-index: 2;
+    
+            .info {
+                font-size: base.$tiny-font;
+            }
+        }
+        .task:nth-last-child(3) {
+            top: 15%;
+            left: 9%;
+            width: 36%;
+            box-shadow: 20px 0 base.$transparent-red;
+        }
+        .task:nth-last-child(2) {
+            top: 40%;
+            left: 46%;
+            background-color: base.$dark-blue;
+            box-shadow: 40px 0 base.$transparent-blue;
+        }
+        .task:last-child {
+            top: 65%;
+            left: 62%;
+            box-shadow: 24px 0 base.$transparent-red;
         }
     }
 }
