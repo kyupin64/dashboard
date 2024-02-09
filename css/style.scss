@@ -17,6 +17,12 @@
     width: $width;
     height: $height;
 }
+@mixin pill($border, $pad-vert, $pad-horiz, $bg-color) {
+    border-radius: #{$border} / 50%;
+    height: 20%;
+    padding: $pad-vert $pad-horiz;
+    background-color: $bg-color;
+}
 
 * {
     margin: 0;
@@ -38,7 +44,7 @@ body {
 
 #container {
     @include colors-spacing(base.$dark-grey, $pad-vert: 2%, $pad-horiz: 3%);
-    @include card(2%, 2%, 92%, 110%);
+    @include card(2%, 2%, 92%, 125%);
 
     #top-bar {
         @include flexbox(row wrap, space-between, center);
@@ -56,6 +62,12 @@ body {
                     width: 100%;
                 }
             }
+        }
+        div.dark-mode {
+            @include pill(25%, 6px, 7px, base.$medium-grey);
+        }
+        div:last-child {
+            padding-left: 8%;
         }
     }
     #nav {
@@ -87,11 +99,17 @@ body {
 }
 
 #hero-row {
-    @include flexbox(row wrap, space-between, center);
+    @include flexbox(row wrap, space-between, center, 20px);
+
+    > div:last-child h3 {
+        @include pill(20%, 12px, 18px, base.$very-light-grey);
+        color: base.$very-dark-grey;
+    }
 }
 
 #main-content {
     @include flexbox(row wrap, space-between, $gap: 10px);
+    padding-top: 4%;
 
     .outer-card:nth-child(odd) {
         @include colors-spacing(base.$medium-grey);
@@ -304,4 +322,8 @@ p {
     @extend %icon;
     @include colors-spacing(base.$very-light-grey, base.$very-dark-grey, 7px, 7px);
     width: 28px;
+}
+.dark {
+    background-color: base.$medium-grey;
+    color: base.$very-light-grey;
 }

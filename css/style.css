@@ -31,7 +31,7 @@ body {
   padding: 2% 3%;
   border-radius: 2%/2%;
   width: 92%;
-  height: 110%;
+  height: 125%;
 }
 #container #top-bar {
   display: flex;
@@ -56,6 +56,15 @@ body {
 }
 #container #top-bar div:first-child a img {
   width: 100%;
+}
+#container #top-bar div.dark-mode {
+  border-radius: 25%/50%;
+  height: 20%;
+  padding: 6px 7px;
+  background-color: #666;
+}
+#container #top-bar div:last-child {
+  padding-left: 8%;
 }
 #container #nav {
   position: fixed;
@@ -91,7 +100,14 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
+  gap: 20px;
+}
+#hero-row > div:last-child h3 {
+  border-radius: 20%/50%;
+  height: 20%;
+  padding: 12px 18px;
+  background-color: #eee;
+  color: #222;
 }
 
 #main-content {
@@ -100,6 +116,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
+  padding-top: 4%;
 }
 #main-content .outer-card:nth-child(odd) {
   background-color: #666;
@@ -366,4 +383,9 @@ p {
   color: #222;
   padding: 7px 7px;
   width: 28px;
+}
+
+.dark {
+  background-color: #666;
+  color: #eee;
 }/*# sourceMappingURL=style.css.map */
