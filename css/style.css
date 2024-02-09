@@ -28,8 +28,8 @@ body {
 #container {
   background-color: #444;
   color: transparent;
-  padding: 2% 3%;
-  border-radius: 2%/3%;
+  padding: 2% 2%;
+  border-radius: 1.7%/3%;
   width: 92%;
   height: -moz-max-content;
   height: max-content;
@@ -290,7 +290,7 @@ body {
   margin: 2% 0;
 }
 .inner-card .chart {
-  width: 96%;
+  width: 101%;
   height: 87%;
   position: relative;
   font-size: 0.9em;
@@ -402,6 +402,9 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
+  #container {
+    border-radius: 2%/3%;
+  }
   #main-content .outer-card:nth-child(odd) {
     border-radius: 7%/8%;
   }
@@ -432,6 +435,9 @@ p {
   .inner-card .to-do div {
     border-radius: 3.5%/12%;
   }
+  .inner-card .chart {
+    width: 99%;
+  }
 }
 @media screen and (max-width: 960px) {
   #container {
@@ -440,8 +446,11 @@ p {
   #container #hero-row > div:first-child {
     width: 100%;
   }
+  .inner-card .chart {
+    width: 96%;
+  }
 }
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 806px) {
   #main-content .outer-card:nth-child(odd) {
     border-radius: 4%/8%;
   }
@@ -459,8 +468,13 @@ p {
   }
   .inner-card .msg-container div:last-child {
     border-radius: 1.5%/20%;
+    height: -moz-max-content;
+    height: max-content;
   }
   .inner-card .to-do div {
     border-radius: 2%/10%;
+  }
+  .inner-card .chart {
+    width: 99%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -43,8 +43,8 @@ body {
 }
 
 #container {
-    @include colors-spacing(base.$dark-grey, $pad-vert: 2%, $pad-horiz: 3%);
-    @include card(2%, 3%, 92%, max-content);
+    @include colors-spacing(base.$dark-grey, $pad-vert: 2%, $pad-horiz: 2%);
+    @include card(1.7%, 3%, 92%, max-content);
 
     #top-bar {
         @include flexbox(row wrap, space-between, center);
@@ -239,7 +239,7 @@ body {
     }
 
     .chart {
-        width: 96%;
+        width: 101%;
         height: 87%;
         position: relative;
         font-size: base.$small-font;
@@ -335,6 +335,9 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
+    #container {
+        border-radius: 2%/3%;
+    }
 
     #main-content {
         .outer-card:nth-child(odd) {
@@ -374,6 +377,9 @@ p {
         .to-do div {
             border-radius: 3.5%/12%;
         }
+        .chart {
+            width: 99%;
+        }
     } 
 }
 
@@ -384,9 +390,12 @@ p {
             width: 100%;
         }
     }
+    .inner-card .chart {
+        width: 96%;
+    }
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 806px) {
 
     #main-content {
         .outer-card:nth-child(odd) {
@@ -410,10 +419,14 @@ p {
             }
             div:last-child {
                 border-radius: 1.5%/20%;
+                height: max-content;
             }
         }
         .to-do div {
             border-radius: 2%/10%;
+        }
+        .chart {
+            width: 99%;
         }
     } 
 }
