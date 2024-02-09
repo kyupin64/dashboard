@@ -201,6 +201,22 @@ body {
             box-shadow: 24px 0 base.$transparent-red;
         }
     }
+
+    .to-do {
+        @include flexbox(column nowrap, $gap: 5px);
+        padding: 2%;
+    
+        div {
+            @include colors-spacing(base.$dark-blue, $pad-vert: 2%, $pad-horiz: 5%);
+            @include card(5%, 17%, 100%, 30%);
+        }
+        div:nth-child(even) {
+            background-color: base.$dark-red;
+        }
+        hr {
+            margin: 2% 0;
+        }
+    }
 }
 
 h1 {
