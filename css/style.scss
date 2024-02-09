@@ -156,6 +156,18 @@ body {
             }
         }
     }
+
+    .schedule {
+        padding: 0 25px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 100%;
+    
+        .hour {
+            border-left: 1px dashed base.$very-dark-grey;
+            border-right: 1px dashed base.$very-dark-grey;
+        }
+    }
 }
 
 h1 {

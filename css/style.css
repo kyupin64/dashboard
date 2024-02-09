@@ -1,5 +1,6 @@
 #container #top-bar div:first-child a, .inner-card .msg-container > div:last-child > div i, .big-icon, .medium-icon, .small-icon {
   border-radius: 50%;
+  text-align: center;
 }
 
 * {
@@ -192,6 +193,16 @@ body {
 }
 .inner-card .msg-container > div:last-child > div i {
   font-size: 0.9em;
+}
+.inner-card .schedule {
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 100%;
+}
+.inner-card .schedule .hour {
+  border-left: 1px dashed #222;
+  border-right: 1px dashed #222;
 }
 
 h1 {
