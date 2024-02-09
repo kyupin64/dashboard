@@ -125,6 +125,39 @@ body {
     }
 }
 
+.inner-card {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    .msg-container {
+        padding: 10px;
+        height: 100%;
+        @include flexbox(column wrap, space-between);
+
+        div {
+            @include colors-spacing(base.$dark-blue, base.$very-light-grey, 2%, 3%);
+            @include card(4%, 25%, 85%);
+        }
+        > div:last-child {
+            @include colors-spacing(base.$medium-grey);
+            @include card(4%, 25%, 100%, 20%);
+            background: linear-gradient(90deg, base.$dark-blue 0%, base.$dark-purple 100%);
+            @include flexbox(row wrap, space-between, center);
+
+            > div {
+                background-color: transparent;
+                width: auto;
+
+                i {            
+                    font-size: base.$small-font;
+                    @extend %icon;
+                }
+            }
+        }
+    }
+}
+
 h1 {
     font-size: base.$biggest-font;
 }
