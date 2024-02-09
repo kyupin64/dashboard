@@ -44,7 +44,7 @@ body {
 
 #container {
     @include colors-spacing(base.$dark-grey, $pad-vert: 2%, $pad-horiz: 3%);
-    @include card(2%, 2%, 92%, 125%);
+    @include card(2%, 3%, 92%, max-content);
 
     #top-bar {
         @include flexbox(row wrap, space-between, center);
@@ -125,12 +125,12 @@ body {
     .outer-card:nth-child(even) {
         @include colors-spacing(base.$medium-grey);
         @include card(4%, 10%, $height: 280px);
-        min-width: 350px;
+        min-width: 390px;
         flex: 1 0 55%;
 
         .inner-card {
             @include colors-spacing(base.$light-grey);
-            @include card(3%, 10%, calc(100% - 20px), 200px);
+            @include card(2.5%, 10%, calc(100% - 20px), 200px);
         }
     }
     .outer-card {
@@ -159,7 +159,7 @@ body {
         }
         > div:last-child {
             @include colors-spacing(base.$medium-grey);
-            @include card(4%, 25%, 100%, 20%);
+            @include card(3%, 30%, 100%, 20%);
             background: linear-gradient(90deg, base.$dark-blue 0%, base.$dark-purple 100%);
             @include flexbox(row wrap, space-between, center);
 
@@ -193,7 +193,6 @@ body {
 
         .task {
             @include colors-spacing(base.$dark-red, base.$very-light-grey, 4px, 6px);
-            @include card(5%, 8%);
             position: absolute;
             z-index: 2;
     
@@ -202,18 +201,21 @@ body {
             }
         }
         .task:nth-last-child(3) {
+            @include card(2%, 12%);
             top: 15%;
             left: 9%;
             width: 36%;
             box-shadow: 20px 0 base.$transparent-red;
         }
         .task:nth-last-child(2) {
+            @include card(5%, 8%);
             top: 40%;
             left: 46%;
             background-color: base.$dark-blue;
             box-shadow: 40px 0 base.$transparent-blue;
         }
         .task:last-child {
+            @include card(5%, 10%);
             top: 65%;
             left: 62%;
             box-shadow: 24px 0 base.$transparent-red;
@@ -226,7 +228,7 @@ body {
     
         div {
             @include colors-spacing(base.$dark-blue, $pad-vert: 2%, $pad-horiz: 5%);
-            @include card(5%, 17%, 100%, 30%);
+            @include card(3%, 14%, 100%, 30%);
         }
         div:nth-child(even) {
             background-color: base.$dark-red;
@@ -292,6 +294,10 @@ body {
     }
 }
 
+.outer-card:nth-last-child(2) .inner-card {
+    overflow-y: scroll;
+}
+
 h1 {
     font-size: base.$biggest-font;
 }
@@ -326,4 +332,88 @@ p {
 .dark {
     background-color: base.$medium-grey;
     color: base.$very-light-grey;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #main-content {
+        .outer-card:nth-child(odd) {
+            border-radius: 7%/8%;
+            .inner-card {
+                border-radius: 5%/7%;
+            }
+        }
+        .outer-card:nth-child(even) {
+            border-radius: 4%/8%;
+            .inner-card {
+                border-radius: 3%/8%;
+            }
+        }
+    }
+  
+    .inner-card {
+        .msg-container {
+            div {
+                border-radius: 4%/12%;
+            }
+            div:last-child {
+                border-radius: 2.5%/20%;
+            }
+        }
+        .schedule {
+            .task:nth-last-child(3) {
+                border-radius: 2%/8%;
+            }
+            .task:nth-last-child(2) {
+                border-radius: 4%/8%;
+            }
+            .task:last-child {
+                border-radius: 3%/9%;
+            }
+        }
+        .to-do div {
+            border-radius: 3.5%/12%;
+        }
+    } 
+}
+
+@media screen and (max-width: 960px) {
+    #container {
+        border-radius: 2%/2%;
+        #hero-row > div:first-child {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 825px) {
+
+    #main-content {
+        .outer-card:nth-child(odd) {
+            border-radius: 4%/8%;
+            .inner-card {
+                border-radius: 3%/7%;
+            }
+        }
+        .outer-card:nth-child(even) {
+            border-radius: 4%/8%;
+            .inner-card {
+                border-radius: 3%/7%;
+            }
+        }
+    }
+  
+    .inner-card {
+        .msg-container {
+            div {
+                border-radius: 2%/20%;
+            }
+            div:last-child {
+                border-radius: 1.5%/20%;
+            }
+        }
+        .to-do div {
+            border-radius: 2%/10%;
+        }
+    } 
 }
