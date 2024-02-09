@@ -265,6 +265,35 @@ body {
 .inner-card .to-do hr {
   margin: 2% 0;
 }
+.inner-card .chart {
+  width: 96%;
+  height: 87%;
+  position: relative;
+  font-size: 0.9em;
+}
+.inner-card .chart h3 {
+  text-align: center;
+  padding: 2%;
+  font-size: 1em;
+}
+.inner-card .chart .axis-y {
+  list-style-type: none;
+  position: absolute;
+  left: 2.4em;
+  bottom: -2.8em;
+  width: 92%;
+  height: 90%;
+}
+.inner-card .chart .axis-y li {
+  height: 25%;
+  border-top: 1px solid #222;
+}
+.inner-card .chart [data-y]:before {
+  content: attr(data-y);
+  position: relative;
+  left: -1.5em;
+  top: -0.7em;
+}
 
 h1 {
   font-size: 2.4em;

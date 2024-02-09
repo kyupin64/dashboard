@@ -217,6 +217,37 @@ body {
             margin: 2% 0;
         }
     }
+
+    .chart {
+        width: 96%;
+        height: 87%;
+        position: relative;
+        font-size: base.$small-font;
+        
+        h3 {
+            text-align: center;
+            padding: 2%;
+            font-size: base.$medium-font;
+        }
+        .axis-y {
+            list-style-type: none;
+            position: absolute;
+            left: 2.4em;
+            bottom: -2.8em;
+            width: 92%;
+            height: 90%;
+        }
+        .axis-y li {
+            height: 25%;
+            border-top: 1px solid base.$very-dark-grey;
+        }
+        [data-y]:before {
+            content: attr(data-y);
+            position: relative;
+            left: -1.5em;
+            top: -.7em;
+        } 
+    }
 }
 
 h1 {
