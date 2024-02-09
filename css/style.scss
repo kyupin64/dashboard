@@ -157,11 +157,16 @@ body {
         }
     }
 
+    .times {
+        @include flexbox(row nowrap, space-between);
+        padding: 5px 10px;
+        font-size: base.$small-font;
+    }
     .schedule {
         padding: 0 25px;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        height: 100%;
+        height: 80%;
     
         .hour {
             border-left: 1px dashed base.$very-dark-grey;
