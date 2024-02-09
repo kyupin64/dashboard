@@ -1,6 +1,6 @@
 @use "base";
 
-@mixin colors-spacing($bg-color: base.$dark-grey, $font-color: base.$very-light-grey, $pad-vert: 0, $pad-horiz: 0) {
+@mixin colors-spacing($bg-color: transparent, $font-color: transparent, $pad-vert: 0, $pad-horiz: 0) {
     background-color: $bg-color;
     color: $font-color;
     padding: $pad-vert $pad-horiz;
@@ -11,6 +11,11 @@
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
+}
+@mixin card($border-1: 3%, $border-2: 3%, $width: auto, $height: auto) {
+    border-radius: #{$border-1} / #{$border-2};
+    width: $width;
+    height: $height;
 }
 
 * {
@@ -32,8 +37,8 @@ body {
 }
 
 #container {
-    @include colors-spacing($pad-vert: 2%, $pad-horiz: 3%);
-    width: 92%;
+    @include colors-spacing(base.$dark-grey, $pad-vert: 2%, $pad-horiz: 3%);
+    @include card(2%, 2%, 92%, 110%);
 
     #top-bar {
         @include flexbox(row wrap, space-between, center);
@@ -59,6 +64,12 @@ body {
         width: 40px;
         height: 80%;
 
+        > a:first-child {
+            padding-top: 5vh;
+        }
+        > a:last-child {
+            padding-top: 15vh;
+        }
         div {
             
             a {
@@ -71,6 +82,7 @@ body {
         float: right;
         width: calc(100% - 40px);
         @include colors-spacing($pad-vert: 20px, $pad-horiz: 20px);
+        padding-right: 0;
     }
 }
 
@@ -80,6 +92,37 @@ body {
 
 #main-content {
     @include flexbox(row wrap, space-between, $gap: 10px);
+
+    .outer-card:nth-child(odd) {
+        @include colors-spacing(base.$medium-grey);
+        @include card(7%, 10%, $height: 280px);
+        min-width: 250px;
+        flex: 1 0 30%;
+
+        .inner-card {
+            @include colors-spacing(base.$light-grey);
+            @include card(4%, 10%, calc(100% - 20px), 200px);
+        }
+    }
+    .outer-card:nth-child(even) {
+        @include colors-spacing(base.$medium-grey);
+        @include card(4%, 10%, $height: 280px);
+        min-width: 350px;
+        flex: 1 0 50%;
+
+        .inner-card {
+            @include colors-spacing(base.$light-grey);
+            @include card(3%, 10%, calc(100% - 20px), 200px);
+        }
+    }
+    .outer-card {
+        position: relative;
+
+        .header {
+            @include colors-spacing($pad-vert: 15px, $pad-horiz: 20px);
+            @include flexbox(row wrap, space-between, flex-start);
+        }
+    }
 }
 
 h1 {
