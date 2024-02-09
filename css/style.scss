@@ -229,7 +229,7 @@ body {
             padding: 2%;
             font-size: base.$medium-font;
         }
-        .axis-y {
+        [class^="axis-"] {
             list-style-type: none;
             position: absolute;
             left: 2.4em;
@@ -247,6 +247,14 @@ body {
             left: -1.5em;
             top: -.7em;
         } 
+        .axis-x {
+            @include flexbox(row nowrap, space-between);
+            height: 2.6em;
+        }
+        .axis-x li {
+            width: 6.5%;
+            text-align: center;
+        }
     }
 }
 
