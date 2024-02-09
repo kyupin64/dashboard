@@ -1,0 +1,133 @@
+#container #top-bar div:first-child a, .big-icon, .medium-icon, .small-icon {
+  border-radius: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  box-sizing: border-box;
+  color: #eee;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(25, 25, 101);
+  color: #eee;
+  padding: 0 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+}
+
+#container {
+  background-color: #444;
+  color: #eee;
+  padding: 2% 3%;
+  width: 92%;
+}
+#container #top-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+#container #top-bar div:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+#container #top-bar div:first-child a {
+  height: 40px;
+  width: 40px;
+  background-color: #eee;
+  color: #eee;
+  padding: 5px 5px;
+}
+#container #top-bar div:first-child a img {
+  width: 100%;
+}
+#container #nav {
+  position: fixed;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 40px;
+  height: 80%;
+}
+#container #nav div a {
+  display: block;
+  padding: 15% 0;
+}
+#container #content {
+  float: right;
+  width: calc(100% - 40px);
+  background-color: #444;
+  color: #eee;
+  padding: 20px 20px;
+}
+
+#hero-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+#main-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.big-icon {
+  font-size: 1em;
+  background-color: #eee;
+  color: #222;
+  padding: 10px 10px;
+  width: 36px;
+}
+
+.medium-icon {
+  font-size: 1em;
+  background-color: #eee;
+  color: #222;
+  padding: 8px 8px;
+  width: 32px;
+}
+
+.small-icon {
+  font-size: 0.9em;
+  background-color: #eee;
+  color: #222;
+  padding: 7px 7px;
+  width: 28px;
+}/*# sourceMappingURL=style.css.map */

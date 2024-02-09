@@ -1,0 +1,115 @@
+@use "base";
+
+@mixin colors-spacing($bg-color: base.$dark-grey, $font-color: base.$very-light-grey, $pad-vert: 0, $pad-horiz: 0) {
+    background-color: $bg-color;
+    color: $font-color;
+    padding: $pad-vert $pad-horiz;
+}
+@mixin flexbox($flow: row nowrap, $justify: flex-start, $align: flex-start, $gap: 0) {
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Jost", sans-serif;
+    box-sizing: border-box;
+    color: base.$very-light-grey;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    @include colors-spacing(base.$dark-blue)
+}
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+#container {
+    @include colors-spacing($pad-vert: 2%, $pad-horiz: 3%);
+    width: 92%;
+
+    #top-bar {
+        @include flexbox(row wrap, space-between, center);
+    
+        div:first-child {
+            @include flexbox($align: center, $gap: 20px);
+
+            a {
+                height: 40px;
+                width: 40px;
+                @include colors-spacing(base.$very-light-grey, $pad-vert: 5px, $pad-horiz: 5px);
+                @extend %icon;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #nav {
+        position: fixed;
+        @include flexbox(column wrap, space-between, center);
+        width: 40px;
+        height: 80%;
+
+        div {
+            
+            a {
+                display: block;
+                padding: 15% 0;
+            }
+        }
+    }
+    #content {
+        float: right;
+        width: calc(100% - 40px);
+        @include colors-spacing($pad-vert: 20px, $pad-horiz: 20px);
+    }
+}
+
+#hero-row {
+    @include flexbox(row wrap, space-between, center);
+}
+
+#main-content {
+    @include flexbox(row wrap, space-between, $gap: 10px);
+}
+
+h1 {
+    font-size: base.$biggest-font;
+}
+h2 {
+    font-size: base.$big-font;
+}
+h3 {
+    font-size: base.$medium-font;
+}
+p {
+    font-size: base.$small-font;
+}
+
+.big-icon {
+    font-size: base.$medium-font;
+    @extend %icon;
+    @include colors-spacing(base.$very-light-grey, base.$very-dark-grey, 10px, 10px);
+    width: 36px;
+}
+.medium-icon {
+    font-size: base.$medium-font;
+    @extend %icon;
+    @include colors-spacing(base.$very-light-grey, base.$very-dark-grey, 8px, 8px);
+    width: 32px;
+}
+.small-icon {
+    font-size: base.$small-font;
+    @extend %icon;
+    @include colors-spacing(base.$very-light-grey, base.$very-dark-grey, 7px, 7px);
+    width: 28px;
+}
