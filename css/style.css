@@ -14,19 +14,21 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: rgb(25, 25, 101);
+  background-color: rgba(1, 1, 15, 0.8);
   color: transparent;
   padding: 0 0;
+  background-image: url("../images/night.jpg");
+  background-size: cover;
 }
 
 body {
   display: flex;
   justify-content: center;
-  padding-top: 3%;
+  padding: 3% 0;
 }
 
 #container {
-  background-color: #444;
+  background-color: rgba(1, 1, 15, 0.8);
   color: transparent;
   padding: 2% 2%;
   border-radius: 1.7%/3%;
@@ -62,7 +64,7 @@ body {
   border-radius: 25%/50%;
   height: 20%;
   padding: 6px 7px;
-  background-color: #666;
+  background-color: #333;
 }
 #container #top-bar div:last-child {
   padding-left: 8%;
@@ -108,7 +110,7 @@ body {
   height: 20%;
   padding: 12px 18px;
   background-color: #eee;
-  color: #222;
+  color: #111;
 }
 
 #main-content {
@@ -120,7 +122,7 @@ body {
   padding-top: 4%;
 }
 #main-content .outer-card:nth-child(odd) {
-  background-color: #666;
+  background-color: rgba(78, 1, 105, 0.7);
   color: transparent;
   padding: 0 0;
   border-radius: 7%/10%;
@@ -130,7 +132,7 @@ body {
   flex: 1 0 25%;
 }
 #main-content .outer-card:nth-child(odd) .inner-card {
-  background-color: #999;
+  background-color: #ccc;
   color: transparent;
   padding: 0 0;
   border-radius: 4%/10%;
@@ -138,7 +140,7 @@ body {
   height: 200px;
 }
 #main-content .outer-card:nth-child(even) {
-  background-color: #666;
+  background-color: rgba(78, 1, 105, 0.7);
   color: transparent;
   padding: 0 0;
   border-radius: 4%/10%;
@@ -148,7 +150,7 @@ body {
   flex: 1 0 55%;
 }
 #main-content .outer-card:nth-child(even) .inner-card {
-  background-color: #999;
+  background-color: #ccc;
   color: transparent;
   padding: 0 0;
   border-radius: 2.5%/10%;
@@ -184,7 +186,7 @@ body {
   gap: 0;
 }
 .inner-card .msg-container div {
-  background-color: rgb(25, 25, 101);
+  background-color: rgb(12, 12, 66);
   color: #eee;
   padding: 2% 3%;
   border-radius: 4%/25%;
@@ -192,13 +194,10 @@ body {
   height: auto;
 }
 .inner-card .msg-container > div:last-child {
-  background-color: #666;
-  color: transparent;
-  padding: 0 0;
   border-radius: 3%/30%;
   width: 100%;
   height: 20%;
-  background: linear-gradient(90deg, rgb(25, 25, 101) 0%, rgb(91, 34, 90) 100%);
+  background: linear-gradient(90deg, rgb(12, 12, 66) 0%, rgb(78, 1, 105) 100%);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -221,6 +220,9 @@ body {
   padding: 5px 15px;
   font-size: 0.7em;
 }
+.inner-card .times p {
+  color: #111;
+}
 .inner-card .schedule {
   padding: 0 25px;
   display: grid;
@@ -228,11 +230,11 @@ body {
   height: 80%;
 }
 .inner-card .schedule .hour {
-  border-left: 1px dashed #222;
-  border-right: 1px dashed #222;
+  border-left: 1px dashed #111;
+  border-right: 1px dashed #111;
 }
 .inner-card .schedule .task {
-  background-color: rgb(81, 17, 17);
+  background-color: rgb(10, 68, 111);
   color: #eee;
   padding: 4px 6px;
   position: absolute;
@@ -248,7 +250,7 @@ body {
   top: 15%;
   left: 9%;
   width: 36%;
-  box-shadow: 20px 0 rgba(81, 17, 17, 0.5);
+  box-shadow: 20px 0 rgba(10, 68, 111, 0.5);
 }
 .inner-card .schedule .task:nth-last-child(2) {
   border-radius: 5%/8%;
@@ -256,8 +258,8 @@ body {
   height: auto;
   top: 40%;
   left: 46%;
-  background-color: rgb(25, 25, 101);
-  box-shadow: 40px 0 rgba(25, 25, 101, 0.5);
+  background-color: rgb(12, 12, 66);
+  box-shadow: 40px 0 rgba(12, 12, 66, 0.5);
 }
 .inner-card .schedule .task:last-child {
   border-radius: 5%/10%;
@@ -265,7 +267,7 @@ body {
   height: auto;
   top: 65%;
   left: 62%;
-  box-shadow: 24px 0 rgba(81, 17, 17, 0.5);
+  box-shadow: 24px 0 rgba(10, 68, 111, 0.5);
 }
 .inner-card .to-do {
   display: flex;
@@ -276,7 +278,7 @@ body {
   padding: 2%;
 }
 .inner-card .to-do div {
-  background-color: rgb(25, 25, 101);
+  background-color: rgb(12, 12, 66);
   color: transparent;
   padding: 2% 5%;
   border-radius: 3%/14%;
@@ -284,7 +286,7 @@ body {
   height: 30%;
 }
 .inner-card .to-do div:nth-child(even) {
-  background-color: rgb(81, 17, 17);
+  background-color: rgb(10, 68, 111);
 }
 .inner-card .to-do hr {
   margin: 2% 0;
@@ -299,6 +301,7 @@ body {
   text-align: center;
   padding: 2%;
   font-size: 1em;
+  color: #111;
 }
 .inner-card .chart [class^=axis-] {
   list-style-type: none;
@@ -310,13 +313,14 @@ body {
 }
 .inner-card .chart .axis-y li {
   height: 25%;
-  border-top: 1px solid #222;
+  border-top: 1px solid #111;
 }
 .inner-card .chart [data-y]:before {
   content: attr(data-y);
   position: relative;
   left: -1.5em;
   top: -0.7em;
+  color: #111;
 }
 .inner-card .chart .axis-x {
   display: flex;
@@ -329,6 +333,7 @@ body {
 .inner-card .chart .axis-x li {
   width: 6.5%;
   text-align: center;
+  color: #111;
 }
 .inner-card .chart .bars {
   display: flex;
@@ -346,10 +351,10 @@ body {
   border-radius: 2%/1%;
   width: 5%;
   height: var(--tooltip-height);
-  background-color: rgb(25, 25, 101);
+  background-color: rgb(12, 12, 66);
 }
 .inner-card .chart .bars .data:nth-child(even) {
-  background-color: rgb(91, 34, 90);
+  background-color: rgb(78, 1, 105);
 }
 
 .outer-card:nth-last-child(2) .inner-card {
@@ -375,7 +380,7 @@ p {
 .big-icon {
   font-size: 1em;
   background-color: #eee;
-  color: #222;
+  color: #111;
   padding: 10px 10px;
   width: 36px;
 }
@@ -383,7 +388,7 @@ p {
 .medium-icon {
   font-size: 1em;
   background-color: #eee;
-  color: #222;
+  color: #111;
   padding: 8px 8px;
   width: 32px;
 }
@@ -391,13 +396,13 @@ p {
 .small-icon {
   font-size: 0.9em;
   background-color: #eee;
-  color: #222;
+  color: #111;
   padding: 7px 7px;
   width: 28px;
 }
 
 .dark {
-  background-color: #666;
+  background-color: #333;
   color: #eee;
 }
 
