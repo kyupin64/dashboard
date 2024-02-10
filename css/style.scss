@@ -396,6 +396,9 @@ p {
 }
 
 @media screen and (max-width: 806px) {
+    #container {
+        border-radius: 2%/1%;
+    }
 
     #main-content {
         .outer-card:nth-child(odd) {
@@ -427,6 +430,142 @@ p {
         }
         .chart {
             width: 99%;
+        }
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        border-radius: 2%/.7%;
+
+        #content {
+            width: 100%;
+            padding: 20px 5px;
+        }
+
+        #nav {
+            position: initial;
+            flex-flow: row nowrap;
+            width: 100%;
+            padding: 3vh 5px 0 5px;
+
+            > a:last-child {
+                padding-top: 0;
+            }
+            > a:first-child {
+                padding-top: 0;
+            }
+            div a {
+                display: inline;
+            }
+        }
+    }
+
+    #main-content {
+        .outer-card:nth-child(odd) {
+            border-radius: 4%/7%;
+            .inner-card {
+                border-radius: 3%/7%;
+            }
+        }
+        .outer-card:nth-child(even) {
+            min-width: 200px;
+            border-radius: 4%/7%;
+            .inner-card {
+                border-radius: 3%/7%;
+            }
+        }
+    }
+  
+    .inner-card {
+        .msg-container {
+            div {
+                border-radius: 2%/14%;
+            }
+            div:last-child {
+                border-radius: 1.5%/20%;
+                height: max-content;
+            }
+        }
+        .schedule {
+            .task:nth-last-child(3) {
+                left: 11.5%;
+                width: 33%;
+            }
+            .task:last-child {
+                width: 31%;
+            }
+        }
+        .to-do div {
+            border-radius: 2%/10%;
+        }
+        .chart {
+            width: 96%;
+            h3 {
+                width: 104%;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 420px) {
+    #container {
+        border-radius: 2%/.45%;
+        #top-bar div:last-child {
+            padding-left: 0;
+        }
+    }
+
+    #main-content {
+        .outer-card:nth-child(odd) {
+            border-radius: 3.5%/5%;
+            .inner-card {
+                border-radius: 2.5%/4.5%;
+            }
+        }
+        .outer-card:nth-child(even) {
+            min-width: 200px;
+            border-radius: 3.5%/5%;
+            .inner-card {
+                border-radius: 2.5%/4.5%;
+            }
+        }
+    }
+  
+    .inner-card {
+        .msg-container {
+            div {
+                border-radius: 2.5%/13%;
+            }
+            div:last-child {
+                border-radius: 1.7%/14%;
+                height: max-content;
+            }
+        }
+        .schedule {
+            .task:nth-last-child(3) {
+                border-radius: 3%/6%;
+                top: 10%;
+                left: 13%;
+                width: 30%;
+            }
+            .task:nth-last-child(2) {
+                top: 41.5%;
+                left: 43%;
+            }
+            .task:last-child {
+                border-radius: 3.5%/6%;
+                width: 30%;
+            }
+        }
+        .to-do div {
+            border-radius: 2%/8%;
+        }
+        .chart {
+            width: 93%;
+            h3 {
+                width: 107%;
+            }
         }
     } 
 }

@@ -451,6 +451,9 @@ p {
   }
 }
 @media screen and (max-width: 806px) {
+  #container {
+    border-radius: 2%/1%;
+  }
   #main-content .outer-card:nth-child(odd) {
     border-radius: 4%/8%;
   }
@@ -476,5 +479,118 @@ p {
   }
   .inner-card .chart {
     width: 99%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #container {
+    border-radius: 2%/0.7%;
+  }
+  #container #content {
+    width: 100%;
+    padding: 20px 5px;
+  }
+  #container #nav {
+    position: initial;
+    flex-flow: row nowrap;
+    width: 100%;
+    padding: 3vh 5px 0 5px;
+  }
+  #container #nav > a:last-child {
+    padding-top: 0;
+  }
+  #container #nav > a:first-child {
+    padding-top: 0;
+  }
+  #container #nav div a {
+    display: inline;
+  }
+  #main-content .outer-card:nth-child(odd) {
+    border-radius: 4%/7%;
+  }
+  #main-content .outer-card:nth-child(odd) .inner-card {
+    border-radius: 3%/7%;
+  }
+  #main-content .outer-card:nth-child(even) {
+    min-width: 200px;
+    border-radius: 4%/7%;
+  }
+  #main-content .outer-card:nth-child(even) .inner-card {
+    border-radius: 3%/7%;
+  }
+  .inner-card .msg-container div {
+    border-radius: 2%/14%;
+  }
+  .inner-card .msg-container div:last-child {
+    border-radius: 1.5%/20%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .inner-card .schedule .task:nth-last-child(3) {
+    left: 11.5%;
+    width: 33%;
+  }
+  .inner-card .schedule .task:last-child {
+    width: 31%;
+  }
+  .inner-card .to-do div {
+    border-radius: 2%/10%;
+  }
+  .inner-card .chart {
+    width: 96%;
+  }
+  .inner-card .chart h3 {
+    width: 104%;
+  }
+}
+@media screen and (max-width: 420px) {
+  #container {
+    border-radius: 2%/0.45%;
+  }
+  #container #top-bar div:last-child {
+    padding-left: 0;
+  }
+  #main-content .outer-card:nth-child(odd) {
+    border-radius: 3.5%/5%;
+  }
+  #main-content .outer-card:nth-child(odd) .inner-card {
+    border-radius: 2.5%/4.5%;
+  }
+  #main-content .outer-card:nth-child(even) {
+    min-width: 200px;
+    border-radius: 3.5%/5%;
+  }
+  #main-content .outer-card:nth-child(even) .inner-card {
+    border-radius: 2.5%/4.5%;
+  }
+  .inner-card .msg-container div {
+    border-radius: 2.5%/13%;
+  }
+  .inner-card .msg-container div:last-child {
+    border-radius: 1.7%/14%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .inner-card .schedule .task:nth-last-child(3) {
+    border-radius: 3%/6%;
+    top: 10%;
+    left: 13%;
+    width: 30%;
+  }
+  .inner-card .schedule .task:nth-last-child(2) {
+    top: 41.5%;
+    left: 43%;
+  }
+  .inner-card .schedule .task:last-child {
+    border-radius: 3.5%/6%;
+    width: 30%;
+  }
+  .inner-card .to-do div {
+    border-radius: 2%/8%;
+  }
+  .inner-card .chart {
+    width: 93%;
+  }
+  .inner-card .chart h3 {
+    width: 107%;
   }
 }/*# sourceMappingURL=style.css.map */
