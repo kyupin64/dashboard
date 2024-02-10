@@ -107,6 +107,10 @@ body {
         @include pill(20%, 12px, 18px, base.$very-light-grey);
         color: base.$very-dark-grey;
     }
+
+    .big-num {
+        font-size: base.$big-num;
+    }
 }
 
 #main-content {
@@ -156,13 +160,14 @@ body {
         @include flexbox(column wrap, space-between);
 
         div {
-            @include colors-spacing(base.$blue, base.$very-light-grey, 2%, 3%);
+            @include colors-spacing(base.$blue, base.$very-light-grey, 2%, 5px);
             @include card(4%, 25%, 85%);
         }
         > div:last-child {
             @include card(3%, 30%, 100%, 20%);
             background: linear-gradient(90deg, base.$blue 0%, base.$purple 100%);
             @include flexbox(row wrap, space-between, center);
+            padding: 0 5px;
 
             > div {
                 background-color: transparent;

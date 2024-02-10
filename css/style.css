@@ -112,6 +112,9 @@ body {
   background-color: #eee;
   color: #111;
 }
+#hero-row .big-num {
+  font-size: 1.7em;
+}
 
 #main-content {
   display: flex;
@@ -188,7 +191,7 @@ body {
 .inner-card .msg-container div {
   background-color: rgb(12, 12, 66);
   color: #eee;
-  padding: 2% 3%;
+  padding: 2% 5px;
   border-radius: 4%/25%;
   width: 85%;
   height: auto;
@@ -203,6 +206,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0;
+  padding: 0 5px;
 }
 .inner-card .msg-container > div:last-child > div {
   background-color: transparent;
