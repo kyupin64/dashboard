@@ -272,7 +272,7 @@ body {
             height: 25%;
             border-top: 1px solid base.$very-dark-grey;
         }
-        [data-y]:before {
+        [data-y]::before {
             content: attr(data-y);
             position: relative;
             left: -1.5em;
