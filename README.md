@@ -2,7 +2,7 @@
 
 GitHub Pages: https://kyupin64.github.io/dashboard/
 
-Git Log: [](log.txt)
+Git Log: [log.txt](log.txt)
 
 Inspiration:
 [Intellecta Dashboard](https://dribbble.com/shots/23428580-Intellecta-Dashboard) by Halo UI/UX,
